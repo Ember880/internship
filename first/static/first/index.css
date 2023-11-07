@@ -1,0 +1,124 @@
+.leftside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 733px;
+    height: 982px;
+  }
+  .rightside{
+    align-items: center;
+    position: relative;
+    background-color: #0ae653;
+    width: 200px;
+    right: 0;
+    height: 982px;
+    overflow: hidden;
+    text-align: center;
+    font-size: var(--font-size-17xl);
+    color: var(--color-black);
+    font-family: var(--font-monomaniac-one);
+  }
+
+.umatimage {
+    position: absolute;
+    top: 272px;
+    left: 190px;
+    border-radius: 0 0 var(--br-9xs) 0;
+    width: 348px;
+    height: 438px;
+    object-fit: cover;
+  }
+  .the-university-of {
+    padding-right: 250px;
+    position: absolute;
+    top: 113px;
+    left: 9px;
+    font-size: 25.44px;
+  }
+  .the-training-unit {
+    position: absolute;
+    top: 812px;
+    left: 200px;
+    font-size: 32px;
+    text-align: left;
+}
+  .frame-child {
+    position: relative;
+    width: 402px;
+    height: 60px;
+  }
+  .frame {
+    position: absolute;
+    top: 858px;
+    left: 976px;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-white);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 352px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .pop-up-dialogue-child {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    border-radius: 8px;
+    background-color: #c5ecd2;
+    width: 867px;
+    height: 435px;
+  }
+  .your-request-is {
+    margin-block-start: 0;
+    margin-block-end: 1.56px;
+  }
+  .your-letter-will {
+    margin: 0;
+  }
+  .your-request-is-container {
+    position: absolute;
+    top: calc(50% - 118px);
+    left: calc(50% - 288.5px);
+  }
+  .pop-up-dialogue-inner,
+  .pop-up-dialogue-item {
+    position: absolute;
+    top: 322px;
+    left: 333px;
+    border-radius: 5px;
+    background-color: #4aee47;
+    width: 240px;
+    height: 75px;
+    cursor: pointer;
+  }
+  .pop-up-dialogue-inner {
+    border-radius: 6px;
+    background-color: #50b94d;
+  }
+  .ok {
+    position: absolute;
+    top: 330px;
+    left: 393px;
+    font-size: var(--font-size-17xl);
+    display: inline-block;
+    width: 120px;
+    height: 73px;
+  }
+  .pop-up-dialogue {
+    position: relative;
+    border-radius: 10px;
+    background-color: #87e070;
+    width: 905px;
+    height: 486px;
+    overflow: hidden;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    font-size: 31.19px;
+    color: var(--color-black);
+    font-family: var(--font-monomaniac-one);
+  }

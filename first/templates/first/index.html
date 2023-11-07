@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" coontent="width=device-width, initial-scale=1.0">
+  <title>The Training Unit</title>
+  {% block css_files %}
+  <link rel="stylesheet" href="{% static "first/index.css" %}">
+  {% endblock  %}
+</head>
+<body>
+  <div class="leftside">
+    <div class="macbook-pro-14-1-child">
+    <img class="umatimage" alt="" src="{% static "/first/images/umat.png" %}"/></div>
+
+    <div class="the-university-of">
+      THE UNIVERSITY OF MINES AND TECHNOLOGY
+    </div>
+    <div class="the-training-unit">THE TRAINING UNIT</div>
+    <div class="frame" id="frameContainer">
+      <img class="frame-child" alt="" src="{% static "first/images/rectangle-1.svg" %}"/></div>
+  </div>
+
+
+  <div class= "rightside">
+    <form action ="" method = "post">
+      <label for "name">First Name:</label>
+      <input type ="text" name="firstname" class="firstname" placeholder="First name">
+
+      <label for "name">Last Name:</label>
+      <input type ="text" name="Last name" class="Last" placeholder="Last name">
+
+      <label for "name">Other names:</label>
+      <input type ="text" name="othernames" class="othernames" placeholder="ohther names">
+
+      <label for "name">Company Name:</label>
+      <input type ="text" name="company name" class="companyname" placeholder="Company">
+
+      <label for "name">Email:</label>
+      <input type ="email" name="email" class="email" placeholder="Email">
+
+      <label for "name">Class:</label>
+      <input type ="text" name="class" class="class" placeholder="Class ">
+
+      <input type="submit" value="Request for letter">
+    </form>
+</div>
+
+  <div id="popUpDialogue" class="popup-overlay" style="display: none">
+    <div class="pop-up-dialogue">
+      <div class="pop-up-dialogue-child"></div>
+      <div class="your-request-is-container">
+        <p class="your-request-is">Your request is submitted.</p>
+        <p class="your-letter-will">
+          Your letter will be ready within 14 working days.
+        </p>
+      </div>
+      <div class="pop-up-dialogue-item" id="popuprectangle1"></div>
+      <div class="pop-up-dialogue-inner" id="popuprectangle2"></div>
+      <div class="ok">OK</div>
+    </div>
+  </div>
+
+  <script>
+    var popuprectangle1 = document.getElementById("popuprectangle1");
+    if (popuprectangle1) {
+      popuprectangle1.addEventListener("click", function (e) {
+        window.location.href = "./MacBookPro141.html";
+      });
+    }
+    
+    var popuprectangle2 = document.getElementById("popuprectangle2");
+    if (popuprectangle2) {
+      popuprectangle2.addEventListener("click", function (e) {
+        window.location.href = "./MacBookPro141.html";
+      });
+    }
+    
+    var frameContainer = document.getElementById("frameContainer");
+    if (frameContainer) {
+      frameContainer.addEventListener("click", function () {
+        var popup = document.getElementById("popUpDialogue");
+        if (!popup) return;
+        var popupStyle = popup.style;
+        if (popupStyle) {
+          popupStyle.display = "flex";
+          popupStyle.zIndex = 100;
+          popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+          popupStyle.alignItems = "center";
+          popupStyle.justifyContent = "center";
+        }
+        popup.setAttribute("closable", "");
+    
+        var onClick =
+          popup.onClick ||
+          function (e) {
+            if (e.target === popup && popup.hasAttribute("closable")) {
+              popupStyle.display = "none";
+            }
+          };
+        popup.addEventListener("click", onClick);
+      });
+    }
+    </script>
+</body>
+</html>
+</html>
